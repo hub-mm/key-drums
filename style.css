@@ -5,8 +5,7 @@
 }
 
 body {
-    height: 100vh;
-    padding: 0 64px;
+    min-height: 100vh;
     font-family: 'Roboto Condensed', sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
@@ -16,6 +15,59 @@ body {
     background-color: black;
 }
 
+.navbar {
+    background-color: rgba(255, 255, 255, 0.431);
+    padding: 4px;
+    box-shadow: 0 10px 10px -8px black;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 4px;
+}
+
+.navbar h1 {
+    font-size: 32px;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px black;
+    padding-right: 56px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 4px 128px;
+}
+
+.background button {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: inherit;
+    color: darkorange;
+    background-color: black;
+    padding: 8px 32px;
+    border-radius: 1px;
+    border: none;
+}
+
+.background :hover {
+    background-color: white;
+}
+
 .keys {
     display: flex;
     height: 100vh;
@@ -23,24 +75,29 @@ body {
     align-items: center;
     flex-wrap: wrap;
     align-content: center;
-    gap: 32px 8px;
+    gap: 8px 8px;
     text-align: center;
+    padding-bottom: 56px;
 }
 
 .key {
     display: flex;
     flex-direction: column;
-    transition: all 0.07s;
     width: 100px;
     background-color: #d3d3d36c;
     border-radius: 10px;
     box-shadow: 0 0 4px black;
+    transition: all 0.09s;
+}
+
+.key :hover {
+    background-color: white;
 }
 
 .playing {
-    transform: scale(1.1);
-    border-color: orange;
-    box-shadow: 0 0 10px red;
+    transform: scale(1.2);
+    border-color: darkred;
+    box-shadow: 0 0 10px darkorange;
 }
 
 kbd {
@@ -49,7 +106,7 @@ kbd {
     font-weight: 800;
     color: white;
     text-shadow: 0 0 10px black;
-    background-color: #2600e435;
+    background-color: rgba(0, 0, 0, 0.312);
     border-radius: 10px;
     border: solid 4px rgb(0, 0, 0);
     box-shadow: 0 0 4px black;
@@ -63,5 +120,6 @@ kbd {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 0 8px black;
-    color: #2600e4ad;
+    color: darkorange;
+    pointer-events: none;
 }
