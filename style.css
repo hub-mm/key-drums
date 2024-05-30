@@ -10,7 +10,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
-    background-image: url(./img/drum-kit.jpeg);
+    background-image: url(./img/drum-kit.jpeg), url(./img/concert-crowd.jpeg);
     background-position: center;
     background-color: black;
 }

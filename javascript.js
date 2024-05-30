@@ -18,13 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function playSound(e) {
     let keyCode;
+    const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
+    const key = document.querySelector(`.key[data-key='${e.keyCode}']`);
 
     if (e.type === 'keydown') {
         keyCode = e.keyCode;
     } else if (e.type === 'click') {
         const keyElement = e.target.closest('.key');
         keyCode = keyElement ? keyElement.dataset.key : null;
-        // keyCode = e.target.closest('.key').dataset.key
     }
 
     console.log('Key pressed or clicked:', keyCode);  // Debugging log
@@ -34,8 +35,6 @@ function playSound(e) {
         return;
     }
 
-    const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
-    const key = document.querySelector(`.key[data-key='${e.keyCode}']`);
 
     if (!audio) {
         console.log('No audio element found for key:', keyCode); // Debugging log
