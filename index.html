@@ -6,7 +6,6 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <link rel='stylesheet' href='./style.css'>
   <link rel="shortcut icon" href="#">
-  <script src='./javascript.js' defer></script>
   <link rel='preconnect' href='https://fonts.googleapis.com'>
   <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
   <link href='https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap'
@@ -21,10 +20,10 @@
       <h1>Key Drums</h1>
       <ul class="nav">
         <li class="background">
-          <button class="drumk-kit">Drum Kit</button>
+          <button id="drum-kit" onclick="changeBackground(event)">Drum Kit</button>
         </li>
         <li class="background">
-          <button class="concert-crowd">Concert Crowd</button>
+          <button id="concert-crowd" onclick="changeBackground(event)">Concert Crowd</button>
         </li>
       </ul>
     </div>
@@ -33,39 +32,39 @@
   <div class="container">
 
     <div class='keys'>
-      <div data-key='65' class='key'>
+      <div data-key='KeyA' class='key' onclick="playSound">
         <kbd>A</kbd>
         <span class='sound'>Clap</span>
       </div>
-      <div data-key='83' class='key'>
+      <div data-key='KeyS' class='key'>
         <kbd>S</kbd>
         <span class='sound'>Hihat</span>
       </div>
-      <div data-key='68' class='key'>
+      <div data-key='KeyD' class='key'>
         <kbd>D</kbd>
         <span class='sound'>Kick</span>
       </div>
-      <div data-key='70' class='key'>
+      <div data-key='KeyF' class='key'>
         <kbd>F</kbd>
         <span class='sound'>Openhat</span>
       </div>
-      <div data-key='71' class='key'>
+      <div data-key='KeyG' class='key'>
         <kbd>G</kbd>
         <span class='sound'>Boom</span>
       </div>
-      <div data-key='72' class='key'>
+      <div data-key='KeyH' class='key'>
         <kbd>H</kbd>
         <span class='sound'>Ride</span>
       </div>
-      <div data-key='74' class='key'>
+      <div data-key='KeyJ' class='key'>
         <kbd>J</kbd>
         <span class='sound'>Snare</span>
       </div>
-      <div data-key='75' class='key'>
+      <div data-key='KeyK' class='key'>
         <kbd>K</kbd>
         <span class='sound'>Tom</span>
       </div>
-      <div data-key='76' class='key'>
+      <div data-key='KeyL' class='key'>
         <kbd>L</kbd>
         <span class='sound'>Tink</span>
       </div>
@@ -73,16 +72,17 @@
 
   </div>
 
-  <audio data-key='65' src='./audio/clap.mp3'></audio>
-  <audio data-key='83' src='./audio/hihat.mp3'></audio>
-  <audio data-key='68' src='./audio/kick.mp3'></audio>
-  <audio data-key='70' src='./audio/open-hat.mp3'></audio>
-  <audio data-key='71' src='./audio/boom.mp3'></audio>
-  <audio data-key='72' src='./audio/ride.mp3'></audio>
-  <audio data-key='74' src='./audio/snare.mp3'></audio>
-  <audio data-key='75' src='./audio/tom.mp3'></audio>
-  <audio data-key='76' src='./audio/tink.mp3'></audio>
+  <audio data-key='KeyA' src='./audio/clap.mp3'></audio>
+  <audio data-key='KeyS' src='./audio/hihat.mp3'></audio>
+  <audio data-key='KeyD' src='./audio/kick.mp3'></audio>
+  <audio data-key='KeyF' src='./audio/open-hat.mp3'></audio>
+  <audio data-key='KeyG' src='./audio/boom.mp3'></audio>
+  <audio data-key='KeyH' src='./audio/ride.mp3'></audio>
+  <audio data-key='KeyJ' src='./audio/snare.mp3'></audio>
+  <audio data-key='KeyK' src='./audio/tom.mp3'></audio>
+  <audio data-key='KeyL' src='./audio/tink.mp3'></audio>
 
+  <script src='./javascript.js'></script>
 </body>
 
 </html>
