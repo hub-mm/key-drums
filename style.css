@@ -62,6 +62,7 @@ body {
     padding: 8px 32px;
     border-radius: 1px;
     border: none;
+    cursor: pointer;
 }
 
 .background :hover {
@@ -110,6 +111,7 @@ kbd {
     border-radius: 10px;
     border: solid 4px rgb(0, 0, 0);
     box-shadow: 0 0 4px black;
+    cursor: pointer;
 }
 
 .sound {
